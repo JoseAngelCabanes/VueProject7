@@ -9,6 +9,8 @@ const app = Vue.createApp({
       monsterHealth: 100,
       currentRound: 0,
       winner: null,
+      name: "",
+      confirmedName: "",
     };
   },
   computed: {
@@ -49,6 +51,12 @@ const app = Vue.createApp({
     },
   },
   methods: {
+    confirmedInput() {
+      this.confirmedName = this.name;
+    },
+    setName(nickName, event) {
+      this.name = nickName + ' ' + event.target.value;
+    },
     startGame() {
       this.playerHealth = 100;
       this.monsterHealth = 100;
@@ -82,7 +90,7 @@ const app = Vue.createApp({
       this.attackPlayer();
     },
     surrender() {
-        this.winner = 'monster';
+      this.winner = "monster";
     },
   },
 });

@@ -17,6 +17,9 @@
       <h1>Sith Slayer</h1>
     </header>
     <div id="game">
+      <section>
+        <input type="text" v-on:input="setName('Jedi', $event)" v-on:keyup.enter="confirmedInput">
+      </section>
       <section id="monster" class="container">
         <h2>Sith Health</h2>
         <div class="healthbar">
@@ -24,7 +27,7 @@
         </div>
       </section>
       <section id="player" class="container">
-        <h2>Your Health</h2>
+        <h2 :input="confirmedInput">{{ confirmedName }}</h2>
         <div class="healthbar">
           <div class="healthbar__value" :style="playerBarStyles"></div>
         </div>

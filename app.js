@@ -51,8 +51,9 @@ const app = Vue.createApp({
     },
   },
   methods: {
-    confirmedInput() {
+    confirmedInput(event) {
       this.confirmedName = this.name;
+      event.target.value = '';
     },
     setName(nickName, event) {
       this.name = nickName + ' ' + event.target.value;

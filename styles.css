@@ -53,6 +53,14 @@ section {
   margin: 0.25rem;
 }
 
+#monster {
+  text-shadow: 0 0 10px red;
+}
+
+#player {
+  text-shadow: 0 0 10px blue;
+}
+
 #controls {
   display: flex;
   flex-direction: row;

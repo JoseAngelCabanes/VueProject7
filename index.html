@@ -21,8 +21,9 @@
         <input
           type="text"
           v-on:input="setName('Jedi', $event)"
-          v-on:keyup.enter="confirmedInput"
+          placeholder="Enter your Jedi name"
         />
+        <button @click="confirmedInput">Enter Name</button>
       </section>
       <section id="monster" class="container">
         <h2>Sith Health</h2>

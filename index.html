@@ -65,7 +65,7 @@
               <span class="log--heal">{{ logMessage.actionValue }}</span></span
             >
             <span v-else>
-              {{ logMessage.actionBy }} 
+             
               <span>
                 {{ logMessage.actionType }} and deals
                 <span :class="logMessage.actionType === ' does special attack' ? 'log--specialDamage' : 'log--damage'">{{ logMessage.actionValue }}</span>

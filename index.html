@@ -67,8 +67,8 @@
             <span v-else>
              
               <span>
-                {{ logMessage.actionType }} and deals
-                <span :class="logMessage.actionType === ' does special attack' ? 'log--specialDamage' : 'log--damage'">{{ logMessage.actionValue }}</span>
+                uses {{ logMessage.actionType }} and deals
+                <span :class="logMessage.actionType === 'special attack' ? 'log--specialDamage' : 'log--damage'">{{ logMessage.actionValue }}</span>
               </span>
           </li>
         </ul>

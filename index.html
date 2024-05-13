@@ -57,7 +57,7 @@
           <li v-for="logMessage in logMessages">
             <span
               :class="{'log--player': logMessage.actionBy === 'player', 'log--monster': logMessage.actionBy === 'monster'}"
-              >{{ logMessage.actionBy === 'player' ? confirmedName : 'Monster'
+              >{{ logMessage.actionBy === 'player' ? confirmedName : 'Sith'
               }}
             </span>
             <span v-if="logMessage.actionType === 'heal'">

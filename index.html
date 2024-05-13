@@ -51,7 +51,7 @@
         <button @click="healPlayer">HEAL</button>
         <button @click="surrender">SURRENDER</button>
       </section>
-      <section id="log" class="container">
+      <section id="log" class="container battleLog">
         <h2>Battle Log</h2>
         <ul>
           <li v-for="logMessage in logMessages">
@@ -65,11 +65,11 @@
               <span class="log--heal">{{ logMessage.actionValue }}</span></span
             >
             <span v-else>
-              {{ logMessage.actionType }} and deals
-              <span class="log--damage"
-                >{{ logMessage.actionValue }}</span
-              ></span
-            >
+              {{ logMessage.actionBy }} 
+              <span>
+                {{ logMessage.actionType }} and deals
+                <span :class="logMessage.actionType === ' does special attack' ? 'log--specialDamage' : 'log--damage'">{{ logMessage.actionValue }}</span>
+              </span>
           </li>
         </ul>
       </section>

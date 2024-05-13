@@ -48,6 +48,10 @@ section {
   border-radius: 12px;
 }
 
+.battleLog {
+  background-color: grey;
+}
+
 #monster h2,
 #player h2 {
   margin: 0.25rem;
@@ -112,17 +116,21 @@ button:disabled {
 }
 
 .log--player {
-  color: #7700ff;
+  color: #7a17eb;
 }
 
 .log--monster {
-  color: #da8d00;
+  color: #ffa703;
 }
 
 .log--damage {
-  color: red;
+  color: darkred;
+}
+
+.log--specialDamage {
+  color: rgb(190, 190, 4);
 }
 
 .log--heal {
-  color: green;
+  color: rgb(7, 122, 7);
 }
